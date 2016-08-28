@@ -1,11 +1,11 @@
 {
-    "BOT||HELLO||HI||HI THERE||HELLO THERE": "Hi there!\nI’m the personal bot of Nick, a Technical Lead from a boutique agency from Hong Kong.\n!Want to know more about bots or learn about Nick? %[I'm here for the bot](postback:here_for_the_bot) %[Learn about Nick](postback:learn_about_nick) %[Quick search](postback:quick_search) [Let's Connect](postback:connect)",
+    "BOT||HELLO||HI||HI THERE||HELLO THERE": "Hi there!\nI’m the personal bot of Nick, a Technical Lead from a boutique agency from Hong Kong.\n!Want to know more about bots or learn about Nick? %[I'm here for the bot](postback:here_for_the_bot) %[Learn about Nick](postback:learn_about_nick) %[Quick search](postback:quick_search) %[Let's Connect](postback:connect)",
     "I LOVE YOU": "Who are you again?",
     "YO":"YO",
     "YOYO||YO YO":"YOYO",
     "LEARN ABOUT NICK":"Currently working as a Technical Lead from a boutique agency from Hong Kong.\nFull stack dev for 6 years, knowing PHP (I know, dun talk about it), Mysql, HTML,CSS with Scss, Modular Javascript, ReactJs, AngularJs, Wordpress, Magento, Modx, Laravel, Ubuntu/Linux/Mac for development environment, Docker for local dev.\nLike hacking things/tools together & Love seeing how new tech works! ;)",
     "I'M HERE FOR THE BOT":"Ar, right..\nOkay, the bot is an open source project from Esther, Look it up https://github.com/esthercrawford/EstherBot",
     "QUICK SEARCH ON HIS MIND":"Links Links Links! Try to type dig and follow by your keywords. For example, dig jquery",
-    "LET'S CONNECT": "",
+    "LET'S CONNECT": "My github is https://github.com/nickwanhere, my pinboard is https://pinboard.in/u:nickwanhere and the linkedin would be https://www.linkedin.com/in/nickwan",
     "DISCONNECT": "Roger that, NickBot is back."
 }
