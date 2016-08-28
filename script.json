@@ -1,5 +1,5 @@
 {
-    "BOT||HELLO||HI||HI THERE||HELLO THERE": "Hi there!\nI’m the personal bot of Nick, a Technical Lead from a boutique agency from Hong Kong.\n!Want to know more about bots or learn about Nick? %[I'm here for the bot](postback:here_for_the_bot) %[Learn about Nick](postback:learn_about_nick) %[Quick search](postback:quick_search) %[Let's Connect](postback:connect)",
+    "BOT||HELLO||HI||HI THERE||HELLO THERE": "Hi there!\nI’m the personal bot of Nick, a Technical Lead from a boutique agency from Hong Kong!\nWant to know more about bots or learn about Nick? %[Learn about Nick](postback:learn_about_nick) %[Quick search](postback:quick_search) %[Let's Connect](postback:connect) %[I'm here for the bot](postback:here_for_the_bot)",
     "I LOVE YOU": "Who are you again?",
     "YO":"YO",
     "YOYO||YO YO":"YOYO",
@@ -7,5 +7,6 @@
     "I'M HERE FOR THE BOT":"Ar, right..\nOkay, the bot is an open source project from Esther, Look it up https://github.com/esthercrawford/EstherBot",
     "QUICK SEARCH ON HIS MIND":"Links Links Links! Try to type dig and follow by your keywords. For example, dig jquery",
     "LET'S CONNECT": "My github is https://github.com/nickwanhere, my pinboard is https://pinboard.in/u:nickwanhere and the linkedin would be https://www.linkedin.com/in/nickwan",
+    "FUCK||PK||CUNT||DAMN":"Mind your words! I am not an easy bot .\\ /.",
     "DISCONNECT": "Roger that, NickBot is back."
 }
