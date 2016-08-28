@@ -64,7 +64,7 @@ module.exports = new Script({
 
                     pinboard.all({tag: query,results:5}, function(err, res) {
 
-                        reply = ['How about these?'];
+                        reply = ['How about these?8|8|'];
 
                         res.forEach(function(link) {
                           reply.push(link.description+"\n"+link.href+"\n"+link.tags)
@@ -72,7 +72,7 @@ module.exports = new Script({
                         });
 
 
-                        reply = reply.join("\n");
+                        reply = reply.join("\n\n");
         
                         var p = Promise.resolve();
 
