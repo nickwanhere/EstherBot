@@ -64,22 +64,15 @@ module.exports = new Script({
 
                     pinboard.all({tag: query,results:5}, function(err, res) {
 
-                        reply = ['How about these?8|8|'];
-
-                        res.forEach(function(link) {
-                          reply.push(link.description+"\n"+link.href+"\n"+link.tags)
-                   
-                        });
-
-
-                        reply = reply.join("\n\n");
-        
                         var p = Promise.resolve();
 
-                        p = p.then(function() {
-                            return bot.say(reply);
-                        });
+                        bot.say('How about these?\xF0\x9F\x91\x8F\xF0\x9F\x91\x8F');
 
+                        res.forEach(function(link) {
+                            p = p.then(function() {
+                                return bot.say(link.description+"\n"+link.href+"\n"+link.tags);
+                            });
+                        });
                         return p.then(() => 'speak');
 
                     });
