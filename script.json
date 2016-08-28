@@ -1,8 +1,10 @@
 {
     "BOT": "Hi there!\nI’m the personal bot of Nick, a Technical Lead from a boutique agency from Hong Kong.\n!Want to know more about bots or learn about Nick? %[I'm here for the bot](postback:here_for_the_bot) %[Learn about Nick](postback:learn_about_nick) %[Quick search on his mind.](postback:quick_search)",
-    "HELLO": "Hi there, I am the bot of Nick Wan. Hereby to answer all your questions if you want.)",
-    "HI": "Hi there, I am the bot of Nick Wan. Hereby to answer all your questions if you want.)",
+    "HELLO||HI||HI THERE||HELLO THERE": "Hi there, I am the bot of Nick Wan. Hereby to answer all your questions if you want.",
     "I LOVE YOU": "Who are you again?",
+    "YO":"YO",
+    "YOYO||YO YO":"YOYO",
+    "LEARN ABOUT NICK":"Just Nick",
     "CONNECT ME": "",
     "DISCONNECT": "Roger that, NickBot is back."
 }

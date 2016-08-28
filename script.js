@@ -13,7 +13,7 @@ module.exports = new Script({
 
     start: {
         receive: (bot) => {
-            return bot.say('So you want to learn about Esther? Just say HELLO to get started.')
+            return bot.say('So you want to learn about Nick? Just say HELLO to get started.')
                 .then(() => 'speak');
         }
     },
@@ -46,21 +46,29 @@ module.exports = new Script({
                 var dunno = [
                     `I didn't understand that.`,
                     `My creator didnt teach me that.`,
-                    `I think I will just pass along the questions. Hold on.`
+                    `I think I will just pass along the question. Hold on.`
                 ];
 
-                if (!_.has(scriptRules, upperText)) {
+                var response = false;
+                var re = new RegExp("\\b"+upperText+"\\b","g");
+
+                for(var key in scriptRules) {
+                    if(re.test(key))
+                    {
+                         response=scriptRules[key];
+                    }
+                }
+
+                if (!response) {
                     return bot.say(dunno[Math.floor(Math.random() * dunno.length)]).then(() => 'speak');
                 }
 
-                var response = scriptRules[upperText];
                 var lines = response.split('\n');
 
                 var p = Promise.resolve();
                 _.each(lines, function(line) {
                     line = line.trim();
                     p = p.then(function() {
-                        console.log(line);
                         return bot.say(line);
                     });
                 })
