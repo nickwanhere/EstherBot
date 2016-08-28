@@ -43,8 +43,14 @@ module.exports = new Script({
                     return Promise.resolve("speak");
                 }
 
+                var dunno = [
+                    `I didn't understand that.`,
+                    `My creator didnt teach me that.`,
+                    `I think I will just pass along the questions. Hold on.`
+                ];
+
                 if (!_.has(scriptRules, upperText)) {
-                    return bot.say(`I didn't understand that.`).then(() => 'speak');
+                    return bot.say(dunno[Math.floor(Math.random() * dunno.length)]).then(() => 'speak');
                 }
 
                 var response = scriptRules[upperText];
