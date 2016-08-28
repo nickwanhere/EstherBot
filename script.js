@@ -66,7 +66,7 @@ module.exports = new Script({
 
                         var p = Promise.resolve();
 
-                        bot.say('How about these?\xF0\x9F\x91\x8F\xF0\x9F\x91\x8F');
+                        bot.say('How about these? :]');
 
                         res.forEach(function(link) {
                             p = p.then(function() {
