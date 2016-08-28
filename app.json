@@ -17,6 +17,10 @@
     "SMOOCH_SECRET": {
       "description": "Your Smooch secret, used to talk to the Smooch API",
       "required": true
-    }
+    },
+    "PINBOARD_TOKEN": {
+      "description": "Your PINBOARD secret, used to talk to the Smooch API",
+      "required": false
+    },
   }
 }

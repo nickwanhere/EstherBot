@@ -5,6 +5,8 @@ const Script = require('smooch-bot').Script;
 
 const scriptRules = require('./script.json');
 
+var Pinboard = require('node-pinboard');
+
 module.exports = new Script({
     processing: {
         //prompt: (bot) => bot.say('Beep boop...'),
@@ -43,11 +45,48 @@ module.exports = new Script({
                     return Promise.resolve("speak");
                 }
 
+
                 var dunno = [
                     `I didn't understand that.`,
                     `My creator didnt teach me that.`,
                     `I think I will just pass along the question. Hold on.`
                 ];
+
+                if(upperText.split(" ")[0] == 'DIG')
+                {
+                    var query = upperText.replace('DIG ','').toLowerCase();
+   
+                    var token = process.env.PINBOARD_TOKEN;
+
+                    var pinboard = new Pinboard(token);
+
+                    var reply = "Not found anything in my mind...";
+
+                    pinboard.all({tag: query,results:5}, function(err, res) {
+
+                        reply = ['How about these?'];
+
+                        res.forEach(function(link) {
+                          reply.push(link.description+"\n"+link.href+"\n"+link.tags)
+                   
+                        });
+
+
+                        reply = reply.join("\n");
+        
+                        var p = Promise.resolve();
+
+                        p = p.then(function() {
+                            return bot.say(reply);
+                        });
+
+                        return p.then(() => 'speak');
+
+                    });
+
+                    return false;
+
+                }
 
                 var response = false;
                 var re = new RegExp("\\b"+upperText+"\\b","g");
